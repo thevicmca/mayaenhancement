@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DigiPrint Links</title>
+</head>
+<script>
+    function buscar() {
+        var busqueda = document.getElementById("busqueda").value.toLowerCase(); // Convertir la búsqueda a minúsculas
+        var resultadosDiv = document.getElementById("resultados");
+
+        // Realiza una solicitud AJAX para cargar el archivo .txt
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "datos.txt", true);
+
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                var lines = xhr.responseText.split("\n");
+                var resultados = [];
+
+                for (var i = 0; i < lines.length; i++) {
+                    var line = lines[i];
+                    var lineLower = line.toLowerCase(); // Convertir la línea a minúsculas para la comparación
+                    if (lineLower.includes(busqueda)) {
+                        resultados.push(line);
+                    }
+                }
+
+                if (resultados.length > 0) {
+                    resultadosDiv.innerHTML = resultados.join("<br>");
+                } else {
+                    resultadosDiv.innerHTML = "No se encontraron resultados.";
+                }
+            }
+        };
+
+        xhr.send();
+    }
+</script>
+
+
+<body>
+    <div class="descrip">
+        <h1>WE ARE DIGIPRINT</h1>
+        <h2>Picture Service Back Up from DigiPrint, a micro-business dedicated to offering photographic services. On this site we will host all the links to all the photographs sold daily. If you can't find your email, we also have a contact list for support.</h2>
+        <h2>Look for your email that you left with us. After you insert your email, just click on search.</h2>
+    </div>
+    <div class="Buscar">
+        <input type="text" id="busqueda" placeholder="Search email...">
+<button onclick="buscar()" id="btnbuscar">Search</button><br><br>
+
+    </div>
+
+
+ <div id="resultados">
+        <!-- Aquí se mostrarán los resultados -->
+    </div>
+
+
+
+
+
+    </body>
+</html>

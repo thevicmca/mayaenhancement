@@ -1,0 +1,53 @@
+*{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #EDF6F2;
+    
+}
+.descrip{
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 2%;
+    margin: 5%;
+    
+}
+h1{
+    font-size: 26px;
+    color: #434F6B;
+    padding: 3%;
+    border-radius: 15px;
+    
+}
+h2{
+    padding: 3%;
+    padding-top: 5%;
+    font-size: 12px;
+    border-radius: 15px;
+    color: black;
+}
+#busqueda {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f2f2f2; /* Cambia el color de fondo */
+    color: #333; /* Cambia el color del texto */
+    width: 200px;
+    height: 25px;
+    border-color: white;
+    border-radius: 50px 20px;
+    font-size: 14px;
+  }
+  #btnbuscar{
+    font-family: 'Courier New', Courier, monospace;
+    width: 100px;
+    height: 35px;
+    border-color: aliceblue;
+    border-radius: 50px 20px;
+    font-size: 14px;
+    color: white;
+    background-color: #34B0E7;
+    
+  }
+  .Buscar{
+    padding-bottom: 5%;
+  }
+  
