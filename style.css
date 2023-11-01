@@ -5,49 +5,83 @@
     
 }
 .descrip{
-    padding-top: 50px;
+    padding-top: 0%;
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 2%;
-    margin: 5%;
+    margin: 0%;
     
 }
 h1{
     font-size: 26px;
-    color: #434F6B;
-    padding: 3%;
+    color: #314652;
+    padding: 0%;
     border-radius: 15px;
     
 }
+
 h2{
     padding: 3%;
     padding-top: 5%;
     font-size: 12px;
     border-radius: 15px;
-    color: black;
+    color: #314652;
 }
 #busqueda {
     font-family: 'Courier New', Courier, monospace;
     background-color: #f2f2f2; /* Cambia el color de fondo */
-    color: #333; /* Cambia el color del texto */
+    color: #314652; /* Cambia el color del texto */
     width: 200px;
     height: 25px;
-    border-color: white;
+    border-color: #314652;
     border-radius: 50px 20px;
     font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
   }
   #btnbuscar{
     font-family: 'Courier New', Courier, monospace;
     width: 100px;
     height: 35px;
-    border-color: aliceblue;
+    border: none;
     border-radius: 50px 20px;
     font-size: 14px;
     color: white;
-    background-color: #34B0E7;
+    background-color: #314652;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
     
+  }
+  #btnbuscar:hover {
+    transform: scale(1.2);
+  }
+
   }
   .Buscar{
     padding-bottom: 5%;
   }
+  #resultados{
+    font-family: 'Courier New', Courier, monospace;
+  }
   
+  .sociales{
+    min-width: 700px;
+  display: inline;
+  }
+  .sociales a {
+    text-decoration: none;
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #314652;
+    color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+  }
+
+.sociales a:hover {
+  transform: scale(1.2);
+}
