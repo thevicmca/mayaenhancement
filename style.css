@@ -1,5 +1,6 @@
 *{
     text-align: center;
+    align-content: center;
     font-family: 'Courier New', Courier, monospace;
     background-color: #EDF6F2;
     
@@ -16,38 +17,36 @@ h1{
     font-size: 26px;
     color: #314652;
     padding: 0%;
-    border-radius: 15px;
+   
     
 }
 
 h2{
     padding: 3%;
     padding-top: 5%;
-    font-size: 12px;
-    border-radius: 15px;
+    font-size: 14px;
+    
     color: #314652;
 }
 #busqueda {
-    font-family: 'Courier New', Courier, monospace;
+    
     background-color: #f2f2f2; /* Cambia el color de fondo */
     color: #314652; /* Cambia el color del texto */
-    width: 200px;
-    height: 25px;
+    width: 300px;
+    height: 35px;
     border-color: #314652;
-    border-radius: 50px 20px;
+    border-radius: 20px;
     font-size: 14px;
-    font-family: 'Courier New', Courier, monospace;
+    
   }
   #btnbuscar{
-    font-family: 'Courier New', Courier, monospace;
     width: 100px;
     height: 35px;
     border: none;
-    border-radius: 50px 20px;
-    font-size: 14px;
+    border-radius: 20px;
+    font-size: 16px;
     color: white;
     background-color: #314652;
-    font-family: 'Courier New', Courier, monospace;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
     transition: all .4s ease-in-out;
     
@@ -56,12 +55,12 @@ h2{
     transform: scale(1.2);
   }
 
-  }
   .Buscar{
     padding-bottom: 5%;
   }
   #resultados{
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    color: #314652;
   }
   
   .sociales{
@@ -85,3 +84,4 @@ h2{
 .sociales a:hover {
   transform: scale(1.2);
 }
+
