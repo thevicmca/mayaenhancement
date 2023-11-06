@@ -14,15 +14,15 @@
 
     
 }
-h1{
+.descrip h1{
     color: #314652;
 }
 
-p{
+.descrip p{
     color: #314652;
     text-align: justify;
 }
-h2{
+.descrip h2{
   color: #314652;
 }
 #busqueda {
