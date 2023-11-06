@@ -1,7 +1,7 @@
 *{
     text-align: center;
     align-content: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Times New Roman', Times, serif;
     background-color: #EDF6F2;
     
 }
@@ -9,24 +9,21 @@
     padding-top: 0%;
     padding-left: 10%;
     padding-right: 10%;
-    padding-bottom: 2%;
+    padding-bottom: 0%;
     margin: 0%;
+
     
 }
 h1{
-    font-size: 26px;
     color: #314652;
-    padding: 0%;
-   
-    
 }
 
-h2{
-    padding: 3%;
-    padding-top: 5%;
-    font-size: 14px;
-    
+p{
     color: #314652;
+    text-align: justify;
+}
+h2{
+  color: #314652;
 }
 #busqueda {
     
@@ -70,9 +67,9 @@ h2{
   .sociales a {
     text-decoration: none;
     font-size: 16px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
     text-align: center;
     background: #314652;
     color: #f1f1f1;
