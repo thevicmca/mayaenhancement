@@ -11,17 +11,16 @@
 
 </head>
 <script>
-    var dominio = "http://www.mayaenhancement.com"; // Reemplaza esto con tu dominio real
-
     function buscar() {
-        var busqueda = document.getElementById("busqueda").value.toLowerCase();
+        var busqueda = document.getElementById("busqueda").value.trim(); // Obtén y limpia la entrada
         var resultadosDiv = document.getElementById("resultados");
 
         if (busqueda === "") {
-            resultadosDiv.innerHTML = "Por favor, ingrese un término de búsqueda.";
-            return;
+            resultadosDiv.innerHTML = "Please insert an email to continue.";
+            return; // Salir de la función si el campo está vacío
         }
 
+        // Realiza una solicitud AJAX para cargar el archivo .txt
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "datos.txt", true);
 
@@ -32,23 +31,16 @@
 
                 for (var i = 0; i < lines.length; i++) {
                     var line = lines[i];
-                    var lineLower = line.toLowerCase();
+                    var lineLower = line.toLowerCase(); // Convertir la línea a minúsculas para la comparación
                     if (lineLower.includes(busqueda)) {
-                        var partes = line.split(" ");
-                        if (partes.length === 2) {
-                            var correo = partes[0];
-                            var enlace = partes[1];
-                            // Agrega el dominio al enlace
-                            enlace = dominio + enlace;
-                            resultados.push(correo + ' <a href="' + enlace + '" target="_blank">Enlace</a>');
-                        }
+                        resultados.push(line);
                     }
                 }
 
                 if (resultados.length > 0) {
                     resultadosDiv.innerHTML = resultados.join("<br>");
                 } else {
-                    resultadosDiv.innerHTML = "No se encontraron resultados.";
+                    resultadosDiv.innerHTML = "No results found.";
                 }
             }
         };
