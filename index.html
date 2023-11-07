@@ -12,15 +12,14 @@
 </head>
 <script>
     function buscar() {
-        var busqueda = document.getElementById("busqueda").value.trim(); // Obtén y limpia la entrada
+        var busqueda = document.getElementById("busqueda").value.toLowerCase();
         var resultadosDiv = document.getElementById("resultados");
 
         if (busqueda === "") {
-            resultadosDiv.innerHTML = "Please insert an email to continue.";
-            return; // Salir de la función si el campo está vacío
+            resultadosDiv.innerHTML = "Please insert your email that you left with us.";
+            return;
         }
 
-        // Realiza una solicitud AJAX para cargar el archivo .txt
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "datos.txt", true);
 
@@ -30,17 +29,24 @@
                 var resultados = [];
 
                 for (var i = 0; i < lines.length; i++) {
-                    var line = lines[i];
-                    var lineLower = line.toLowerCase(); // Convertir la línea a minúsculas para la comparación
-                    if (lineLower.includes(busqueda)) {
-                        resultados.push(line);
+                    var line = lines[i].toLowerCase();
+                    if (line.includes(busqueda)) {
+                        var parts = line.split(" ");
+                        if (parts.length === 2) {
+                            var correo = parts[0];
+                            var enlace = parts[1];
+
+                            // Crear un enlace HTML válido
+                            var enlaceHTML = '<a href="' + enlace + '" target="_blank" style="text-decoration:none">' + correo + '</a>';
+                            resultados.push(enlaceHTML);
+                        }
                     }
                 }
 
                 if (resultados.length > 0) {
                     resultadosDiv.innerHTML = resultados.join("<br>");
                 } else {
-                    resultadosDiv.innerHTML = "No results found.";
+                    resultadosDiv.innerHTML = "No results found, contact us.";
                 }
             }
         };
@@ -48,6 +54,7 @@
         xhr.send();
     }
 </script>
+
 
 
 
@@ -62,17 +69,15 @@
     <br>
     </div>
     <div class="pasos">
-        <strong><p>These are the 4 simple steps to get to your link:</p></strong>
+        <strong><p>These are the 3 simple steps to get to your link:</p></strong>
         <p>1. Enter the email you left with us.</p>
         <p>2. Click search.</p>
-        <p>3. It will show you your email and the link to your photos.</p>
-        <p>4. Copy the link and paste it into a new page in your favorite browser and press Enter.</p>
-        <br><br>
-    </div>
+        <p>3. It will show you your email, click on your email and it will take you to your photos in Google Drive</p>
+    </div><br><br>
     <div class="Buscar">
-        <input type="text" id="busqueda" placeholder="Search email..."><br><br>
+        <input type="text" id="busqueda" placeholder="Search email..."><br><br><br>
 <button onclick="buscar()" id="btnbuscar">Search</button>
-    </div>
+    </div><br>
 
 
  <div id="resultados">
