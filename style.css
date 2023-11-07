@@ -1,32 +1,48 @@
 *{
-    text-align: center;
-    align-content: center;
     font-family: 'Times New Roman', Times, serif;
     background-color: #EDF6F2;
     
-}
-.descrip{
-    padding-top: 0%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 0%;
-    margin: 0%;
-
     
 }
-.descrip h1{
+.presentacion{
+  padding-left: 40%;
+  padding-right: 40%;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .presentacion {
+      text-align: center;
+  }
+  .presentacion {
+    padding-left: 10%;
+    padding-right: 10%; 
+}}
+.presentacion h1{
     color: #314652;
 }
-
-.descrip p{
+.presentacion p{
     color: #314652;
-    text-align: justify;
+    text-align: center;
 }
-.descrip h2{
+h2{
+  color: #314652;
+}
+.pasos{
+  text-align: left;
+  padding-left: 40%;
+  padding-right: 40%;
+}
+@media (max-width: 1000px) {
+  .pasos{
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%; 
+  }
+}
+.pasos p{
   color: #314652;
 }
 #busqueda {
-    
     background-color: #f2f2f2; /* Cambia el color de fondo */
     color: #314652; /* Cambia el color del texto */
     width: 300px;
@@ -34,7 +50,7 @@
     border-color: #314652;
     border-radius: 20px;
     font-size: 14px;
-    
+    text-align: center;
   }
   #btnbuscar{
     width: 100px;
@@ -52,33 +68,40 @@
     transform: scale(1.2);
   }
 
+.Buscar{
+  padding-bottom: 5%;
+  text-align: center;
+  padding-left: 40%;
+padding-right: 40%;
+}
+@media (max-width: 1000px) {
   .Buscar{
-    padding-bottom: 5%;
-  }
-  #resultados{
-    font-size: 16px;
-    color: #314652;
-  }
-  
-  .sociales{
-    min-width: 700px;
-  display: inline;
-  }
-  .sociales a {
-    text-decoration: none;
-    font-size: 16px;
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
     text-align: center;
-    background: #314652;
-    color: #f1f1f1;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-    transition: all .4s ease-in-out;
+    padding-left: 10%;
+    padding-right: 10%; 
   }
+}
+#resultados{
+  font-size: 16px;
+  color: #314652;
+}
+
+.sociales{
+  text-align: center;
+}
+.sociales a {
+  text-decoration: none;
+  font-size: 16px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+}
 
 .sociales a:hover {
   transform: scale(1.2);
 }
-
